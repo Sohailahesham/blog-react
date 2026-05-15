@@ -19,7 +19,7 @@ Frontend for the Blog platform built with React and Tailwind CSS.
 1. Clone the repo
    ```
    git clone https://github.com/Sohailahesham/blog-react.git
-   cd blog-frontend
+   cd blog-react
    ```
 
 3. Install dependencies
