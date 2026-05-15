@@ -18,10 +18,13 @@ export const loginSchema = z.object({
 });
 
 export const postSchema = z.object({
-  title: z.string().min(3).max(30),
+  title: z
+    .string()
+    .min(3, "Title must be at least 3 chars")
+    .max(50, "Title must be at most 50 chars"),
   description: z
     .string()
     .min(10, "Description must be at least 10 chars")
-    .max(100),
+    .max(300, "Description must be at most 300 chars"),
   image: z.string().min(1, "Image URL is required").url("Invalid image URL"),
 });
