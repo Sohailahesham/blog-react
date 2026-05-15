@@ -1,16 +1,46 @@
-# React + Vite
+# Blog App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend for the Blog platform built with React and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React + Vite
+- Tailwind CSS + daisyUI
+- React Router
+- Axios
+- Zod Validation
+- React Hot Toast
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clone the repo
+   git clone https://github.com/YOUR_USERNAME/blog-frontend.git
+   cd blog-frontend
 
-## Expanding the ESLint configuration
+2. Install dependencies
+   npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Create a .env file
+   VITE_API_URL=http://localhost:3000/api
+
+4. Run the app
+   npm run dev
+
+## Pages
+
+| Path           | Description              | Auth Required |
+|----------------|--------------------------|---------------|
+| /              | Home — all posts         | No            |
+| /post/:id      | Single post              | No            |
+| /my-posts      | My posts                 | Yes           |
+| /create-post   | Create new post          | Yes           |
+| /edit/:id      | Edit post                | Yes           |
+| /register      | Register                 | No            |
+| /login         | Login                    | No            |
+| /about         | About page               | No            |
+| /contact-us    | Contact page             | No            |
+
+## Deployment
+
+Deployed on Vercel. Add these environment variables in your Vercel project:
+- VITE_API_URL — your deployed backend URL e.g. https://blog-backend.vercel.app/api
