@@ -2,6 +2,9 @@
 
 Frontend for the Blog platform built with React and Tailwind CSS.
 
+## Link after deployment
+   https://blog-react-brown.vercel.app/
+
 ## Tech Stack
 
 - React + Vite
@@ -14,17 +17,25 @@ Frontend for the Blog platform built with React and Tailwind CSS.
 ## Getting Started
 
 1. Clone the repo
+   ```
    git clone https://github.com/Sohailahesham/blog-react.git
    cd blog-frontend
+   ```
 
-2. Install dependencies
+3. Install dependencies
+   ```
    npm install
+   ```
 
-3. Create a .env file
+5. Create a .env file
+   ```
    VITE_API_URL=http://localhost:3000/api
+   ```
 
-4. Run the app
+7. Run the app
+   ```
    npm run dev
+   ```
 
 ## Pages
 
