@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import api from "../api/axios";
 import toast from "react-hot-toast";
 
@@ -8,6 +8,7 @@ export default function Update_Delete_btns({ post, fetchPosts }) {
   const { user } = useContext(AuthContext);
   const [showConfirm, setShowConfirm] = useState(false);
 
+  const navigate = useNavigate();
   const handleDelete = async () => {
     try {
       await api.delete(`/posts/${post._id}`);
@@ -15,7 +16,7 @@ export default function Update_Delete_btns({ post, fetchPosts }) {
       setShowConfirm(false);
 
       toast.success("Post deleted successfully!");
-
+      navigate("/");
       await fetchPosts();
     } catch (err) {
       console.log(err);
