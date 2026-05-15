@@ -17,7 +17,7 @@ export default function Navbar() {
         <div className="navbar-start">
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-8 h-8 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
-              <img src="../../public/icon.png" alt="blog-icon" />
+              <img src="/icon.png" alt="blog-icon" />
             </div>
             <span className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               My Blog
