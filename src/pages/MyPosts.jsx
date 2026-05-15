@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import api from "../api/axios";
 import { AuthContext } from "../providers/AuthProvider";
 import FloatingAddButton from "../components/FloatingAddButton";
-import PostsList from "../components/postsList";
+import PostsList from "../components/PostsList";
 import Spinner from "../components/Spinner";
 
 export default function MyPosts() {

@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import api from "../api/axios.js";
 import FloatingAddButton from "../components/FloatingAddButton";
-import { AuthContext } from "../providers/AuthProvider.jsx";
-import PostsList from "../components/postsList.jsx";
-import Spinner from "../components/Spinner.jsx";
+import { AuthContext } from "../providers/AuthProvider";
+import PostsList from "../components/PostsList";
+import Spinner from "../components/Spinner";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
