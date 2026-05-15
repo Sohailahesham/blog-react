@@ -11,19 +11,13 @@ export default function Navbar() {
     { to: "/contact-us", label: "Contact" },
   ];
 
-  const activeClass = ({ isActive }) =>
-    isActive
-      ? "text-primary font-bold"
-      : "text-base-content/60 hover:text-primary transition-colors duration-200";
-
   return (
     <div className="sticky top-0 z-50 backdrop-blur-md bg-base-100/80 border-b border-base-200 shadow-sm">
       <div className="navbar max-w-6xl mx-auto px-4">
-        {/* ── Logo ── */}
         <div className="navbar-start">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-md shadow-primary/30 group-hover:scale-110 transition-transform duration-200">
-              <span className="text-primary-content font-black text-sm">B</span>
+            <div className="w-8 h-8 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+              <img src="../../public/icon.png" alt="blog-icon" />
             </div>
             <span className="font-extrabold text-lg tracking-tight bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               My Blog
@@ -31,7 +25,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* ── Desktop Nav ── */}
         <div className="navbar-center hidden lg:flex">
           <ul className="flex items-center gap-1">
             {navLinks.map(({ to, label }) => (
@@ -106,7 +99,7 @@ export default function Navbar() {
               </Link>
             </div>
           )}
-          
+
           <div className="dropdown dropdown-end lg:hidden">
             <div
               tabIndex={0}

@@ -13,13 +13,12 @@ import AddPost from "./pages/AddPost";
 import PostForm from "./components/PostForm";
 import OnePost from "./pages/OnePost";
 import { Toaster } from "react-hot-toast";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <AuthProvider>
-      <Toaster
-        position="top-right"
-      />
+      <Toaster position="top-right" />
 
       <Navbar />
       <Routes>
@@ -35,6 +34,7 @@ function App() {
         <Route path="/post/:id" element={<OnePost />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </AuthProvider>
   );
 }
